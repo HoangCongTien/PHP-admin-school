@@ -1,0 +1,346 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.menu-mobile {
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 320px;
+    transform: translate(-100%);
+    transition: 0.5s;
+}
+
+#check:checked~.menu-mobile {
+    transform: translate(0%);
+
+    transition: ease-in-out 0.5s;
+}
+
+.icon img {
+
+
+
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.icon:focus .contenner {
+    width: 10;
+}
+
+.hi {
+    position: absolute;
+    width: 300px;
+    margin-left: 10px;
+    margin-top: 10px;
+    z-index: 1000;
+
+}
+
+/* 
+.menu-mobile {
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+} */
+
+/* }
+    .kmau{
+        position: absolute;
+        top: 0;
+        left: 250px;
+        width: calc(100%-250px);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        transition: ease-in-out0.5s;
+    } */
+
+.contenner {
+    width: 1440px;
+    margin: 0 auto;
+    cursor: pointer;
+    position: absolute;
+}
+
+/* .contenner {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+} */
+
+.mau {
+    background-color: aqua;
+    height: 1000px;
+
+}
+
+.mau img {
+    height: 160px 160px;
+}
+
+
+.img_text {
+    display: grid;
+    grid-template-columns: 86px 1fr;
+    margin-top: 40px;
+}
+
+.img_text img {
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+#abc {
+    text-decoration: none;
+    color: #000;
+    margin-top: 14px;
+
+}
+
+.xinchao p {
+    margin-left: 900px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.headding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kmau {
+
+    height: 1000px;
+}
+
+.hass {
+    border-width: 1px;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.kmau h2 {
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+.hoc {
+    width: 80%;
+    margin-left: 100px;
+
+}
+
+.hoc h3 {
+    margin-top: 100px;
+}
+
+.chu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.cot button {
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 10px;
+    background-color: aqua;
+    text-align: center;
+    border-radius: 20px;
+    color: #fff;
+
+}
+
+.cot :hover {
+    color: rgb(238, 44, 44);
+}
+
+#classStu {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#classStu table {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+#classStu table button {
+    border: none;
+    background-color: #fff;
+}
+
+#classStu table button:hover {
+    background-color: aqua;
+}
+
+.showMain {
+    width: 95%;
+    height: auto;
+    background-color: antiquewhite;
+    position: relative;
+    top: 100px;
+    left: 30px;
+    padding: 50px;
+}
+
+.all {
+    width: 100%;
+    height: 1000px;
+    background-color: rgb(120, 117, 117);
+}
+
+/* check */
+
+
+/* menulist */
+
+.menu-list ul {
+    display: flex;
+}
+
+.menu-list ul li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+.menu-list ul li:hover {
+    background-color: aqua;
+    color: #fff;
+}
+
+#class table {
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* học sinh */
+
+
+.ca {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.ooo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+
+}
+
+.ok h5 {
+    font-size: 20px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px 10px;
+    width: 190px;
+    margin-left: 80px;
+}
+
+#format {
+    background-color: blanchedalmond;
+    margin-top: 35px;
+    padding: 17px 32px;
+    margin-left: 100px;
+}
+
+.seasch {
+    font-size: 20px;
+    padding: 50px 60px;
+}
+
+.seasc button {
+    margin-left: 200px;
+    font-size: 20px;
+    background-color: aqua;
+    border-radius: 20px;
+    color: #fff;
+}
+
+
+
+/* coso */
+.ca1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    margin-top: 80px;
+}
+
+input {
+    text-align: center;
+    width: 190px;
+    color: #000;
+    padding: 10px 10px;
+}
+
+.aaa h3 {
+    padding: 10px 10px;
+    font-size: 15px;
+    border: 1px solid;
+    background-color: aqua;
+    border-radius: 20px;
+
+}
+
+#hihi {
+    padding: 10px 10px;
+
+}
+
+.seasc button {
+    padding: 10px 10px;
+    font-size: 15px;
+    background-color: aqua;
+    border-radius: 20px;
+    color: #fff;
+}
+
+
+h4 {
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px 10px;
+    border: 1px solid;
+}
+
+/* giáo viên */

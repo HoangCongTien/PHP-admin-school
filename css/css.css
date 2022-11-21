@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+.boxcenter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.ol {
+    background: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+
+#logo img {
+    width: 100%;
+}
+
+ul li {
+    display: inline-block;
+    padding: 0 16px;
+}
+
+li a {
+    text-decoration: none;
+    color: #5D5D5D;
+    font-size: 20px;
+}
+
+li:hover a {
+    color: #F54748;
+}
+
+#search-box {
+    background: #fff;
+    border-radius: 30px;
+}
+
+#search-box #search-text {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    width: 0;
+    padding: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+#search-box:hover #search-text {
+    width: 200px;
+
+}
+
+#search-box #search-btn {
+    background-color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+
+}
+
+
+#toggle_sidebar {
+    display: none;
+}
+
+.mmm {
+    position: relative;
+    margin-right: 30px;
+}
+
+.sidebar {
+    display: none;
+
+}
+
+#toggle_sidebar:checked~.sidebar {
+    display: block;
+
+}
+
+
+#benner img {
+    width: 100%;
+    height: 600px;
+}
+
+#header h3:hover {
+    background-color: #fff;
+}
+
+#header h3 {
+    padding: 10px;
+}
+
+#contenn {
+    padding: 20px 100px;
+}
+
+
+.text {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    grid-gap: 30px;
+
+}
+
+.chu p {
+    color: #f58d47;
+    padding: 40px 40px;
+    font-size: 17px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 20px;
+
+}
+
+.chu p:hover {
+    background-color: #000000;
+    padding: 40px 40px;
+}
+
+#contenn h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.cackhoahoc {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    margin-bottom: 50px;
+}
+
+.khoahoc img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.chuuu {
+    padding: 10px 20px;
+}
+
+.chuuu h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.chuuu h5 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.chuuu p {
+    margin-top: 10px;
+}
+
+.anhchu {
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.lolo a {
+
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.lolo a {
+    width: 300px;
+    margin-left: 500px;
+    border-radius: 1px;
+    border: 1px solid #F54748;
+}
+
+.lolo a {
+    text-decoration: none;
+    color: rgb(208, 73, 73);
+}
+
+.lolo a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.cc img {
+    width: 100%;
+
+}
+
+.llll img {
+    margin-top: 20px;
+
+    width: 100%;
+    height: 700px;
+}
+
+.delenne {
+
+    width: 1000px;
+    text-align: center;
+    background-color: rgb(206, 189, 189);
+    padding: 20px 20px;
+}
+
+.concac {
+    margin-left: 180px;
+    margin-bottom: 50px;
+
+}
+
+.
+ position: absolute;
+ z-index: 1000;
+}
+.delenne h4 {
+    padding: 30px 0px;
+}
+
+.delenne p {
+    margin-top: 10px;
+}
+
+.cotdelen {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px
+}
+
+.ban i {
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.pl a {
+    width: 500px;
+    border: 1px solid #F54748;
+    text-align: center;
+
+
+
+
+}
+
+.pl a {
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(137, 10, 10);
+
+}
+
+.pl {
+    margin-top: 20px;
+}
+.on{
+    text-align: center;
+    background-color: #811010;
+    padding: 50px 15px;
+    color:#fff;
+}
+.on p{
+    margin-bottom: 30px;
+}
+.on a{
+    font-size: 15px;
+    text-decoration: none;
+    padding: 5px 5px;
+    background-color: #fff;
+    border: 1px solid ;
+    color: #811010;
+    border-radius: 3px;
+}
