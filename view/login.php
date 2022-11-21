@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +31,7 @@
                         <input type="text" id="pass" placeholder="*********">
                     </div>
                 </div>
-    
+
                 <div class="buttonn">
                     <div class="button1">
                         <button onclick="click()">Login now</button>
@@ -38,11 +39,11 @@
                     <div class="button2">
                         <button>
                             <img src="./src/img/signin/iconfinder_Google_1298745 1.png" alt="">Or sign-in with google
-                        </button>
+</button>
                     </div>
                 </div>
-            
-            
+
+
             </form>
         </main>
         <footer>
@@ -56,7 +57,7 @@
               <div class="b">
                 <a href=""><p> Join free today</p></a>
               </div>
-              
+
            </div>
 
         </footer>

@@ -26,12 +26,12 @@ function loadall_gv(){
     $giaovien=pdo_query($result);
  return $giaovien;
 }
-function update_sv($name,$dress,$age,$tell,$img,$gioitinh){
-    if($img !=" "){
-        $sql ='update sinhvien set name = "'.$name.'",dress = "'.$dress.'",age = "'.$age.'",tell = "'.$tell.'",img = "'.$img.'",gioitinh = "'.$gioitinh.'";
-    }else{
-        $sql ='update sinhvien set name = "'.$name.'",dress = "'.$dress.'",age = "'.$age.'",tell = "'.$tell.'",img = "'.$img.'",gioitinh = "'.$gioitinh.'";
-    }
-    pdo_execute($sql);
-}
+//function update_sv($name,$dress,$age,$tell,$img,$gioitinh){
+////    if($img !=" "){
+////        $sql ='update sinhvien set name = "'.$name.'",dress = "'.$dress.'",age = "'.$age.'",tell = "'.$tell.'",img = "'.$img.'",gioitinh = "'.$gioitinh.'";
+////    }else{
+////        $sql ='update sinhvien set name = "'.$name.'",dress = "'.$dress.'",age = "'.$age.'",tell = "'.$tell.'",img = "'.$img.'",gioitinh = "'.$gioitinh.'";
+////    }
+//    pdo_execute($sql);
+//}
 ?>   
