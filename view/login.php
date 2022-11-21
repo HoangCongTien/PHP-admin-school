@@ -20,21 +20,21 @@
             </div>
         </header>
         <main>
-            <form action="" onsubmit="return kt()">
+            <form action="login.php" method="post">
                 <div class="inputt">
                     <div class="email">
                         <p>Email</p>
-                        <input type="email" id="email"  placeholder="John.snow@gmail.com">
+                        <input type="text" id="email"  placeholder="John.snow@gmail.com" name="user">
                     </div>
                     <div class="pass">
                         <p>Password</p>
-                        <input type="text" id="pass" placeholder="*********">
+                        <input type="text" id="pass" placeholder="*********" name="pass">
                     </div>
                 </div>
 
                 <div class="buttonn">
                     <div class="button1">
-                        <button onclick="click()">Login now</button>
+                        <button >Login now</button>
                     </div>
                     <div class="button2">
                         <button>
