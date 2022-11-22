@@ -18,11 +18,13 @@
                     </tr>
                     <?php
                          foreach ($sinhvien as $value ){
+                            
                              extract($value);
                              $suasv="index.php?act=suasv&id=".$idsinhvien;
                              $xoasv="index.php?act=xoasv&id=".$idsinhvien;
                              $avatar = "../uploadimg/".$img;
-                             if(is_file($img)){
+                             
+                             if(is_file($avatar)){
                                  $img = "<img src='".$avatar."' height='80'>";
                              }else{
                                  $img = "no photo";

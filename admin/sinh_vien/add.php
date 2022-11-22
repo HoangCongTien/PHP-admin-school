@@ -33,7 +33,7 @@
         <div class="rowsubmit">
             <input type="submit" name="themmoi" id="" value="thêm mới">
             <input type="reset" name="" id="" value="nhập lại">
-            <a href="index.php?act=listgv"><input type="button" name="" id="" value="danh sách"></a>
+            <a href="index.php?act=listsv"><input type="button" name="" id="" value="danh sách"></a>
         </div>
         <?php
         if(isset($thongbao)&& $thongbao!= ""){

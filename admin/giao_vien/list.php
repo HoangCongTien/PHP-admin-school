@@ -23,7 +23,8 @@
                              $suagv="index.php?act=suagv&id=".$idgiaovien;
                              $xoagv="index.php?act=xoagv&id=".$idgiaovien;
                              $avatar = "../uploadimg/".$img;
-                             if(is_file($img)){
+                             
+                             if(is_file($avatar)){
                                  $img = "<img src='".$avatar."' height='80'>";
                              }else{
                                  $img = "no photo";

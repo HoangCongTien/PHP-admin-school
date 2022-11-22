@@ -17,28 +17,34 @@ if(is_file($avatar)){
     <div class="rowformcontenr">
         <form action="index.php?act=updatesv" method="post" enctype="multipart/form-data" >
         <div class="rowinput">
+            <input type="hidden" name="id" id="" value="<?php echo "$idsinhvien" ?>">
+        </div>
+        <div class="rowinput">
             Tên sinh viên <br>
-            <input type="text" name="name" id="">
+            <input type="text" name="name" id="" value="<?php echo "$name" ?>">
         </div>
         <div class="rowinput">
             Địa chỉ <br>
-            <input type="text" name="dress" id="">
+            <input type="text" name="dress" id=""value="<?php echo "$dress" ?>">
         </div>
         <div class="rowinput">
             Tuổi <br>
-            <input type="text" name="age" id="">
+            <input type="text" name="age" id="" value="<?php echo "$age" ?>">
         </div>
         <div class="rowinput">
             Liên hệ <br>
-           <input type="text" name="tell" id="">
+           <input type="text" name="tell" id="" value="<?php echo "$tell" ?>">
         </div>
         <div class="rowinput">
             Ảnh <br>
-            <input type="file" name="img" id="">
+            <div>
+            <?php echo "$img" ?>
+            </div>
+            <input type="file" name="img" id="" value="">
         </div>
         <div class="rowinput">
             Giới tính <br>
-           <input type="text" name="gioitinh" id="">
+           <input type="text" name="gioitinh" id="" value="<?php echo "$gioitinh" ?>">
         </div>
 
         <div class="rowsubmit">
