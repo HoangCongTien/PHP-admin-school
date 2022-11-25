@@ -16,6 +16,7 @@
             <ul>
                 <li><a href="index.php?act=addsv">sinh viên</a></li>
                 <li><a href="index.php?act=addgv">Giáo viên</a></li>
+                <li><a href="index.php?act=addlh">Lớp học</a></li>
             </ul>
         </div>
         </div>

@@ -3,6 +3,7 @@ include "giaodien.php";
 include "../model/pdo.php";
 include "../model/sinhvien.php";
 include "../model/giaovien.php";
+include "../model/lophoc.php";
 if(isset($_GET['act'])){
     $act = $_GET['act'];
     switch($act){
@@ -89,7 +90,8 @@ if(isset($_GET['act'])){
     //                      echo 'sorry, ảnh của bạn ko được uplead';
                     }
                     $gioitinh = $_POST['gioitinh'];
-                    insert_gv($name,$adress,$age,$gmail,$tell,$img,$gioitinh);
+                    $idlophoc = $_POST['idlophoc'];
+                    insert_gv($name,$adress,$age,$gmail,$tell,$img,$gioitinh,$idlophoc);
                     $thongbao = "thêm thành công";
                 }
                 
@@ -138,6 +140,17 @@ if(isset($_GET['act'])){
                         $giaovien=loadall_gv();
                             include "giao_vien/list.php";
                             break;
+                //lop hoc
+                case 'addlh' :
+                    if(isset($_POST['themmoi'])&& ($_POST['themmoi'])){
+                        $tenlophoc = $_POST['tenlophoc'];
+                        insert_lh($tenlophoc);
+                        $thongbao = "thêm thành công";
+                    }
+                    
+                    include "lop_hoc/add.php";
+                    
+                    break;
                 // dang nhap
             case  "dangnhap" :
                 if(isset($_POST['dangnhap']) && ($_POST['dangnhap']) ) {

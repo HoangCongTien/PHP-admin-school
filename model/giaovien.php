@@ -1,6 +1,6 @@
 <?php
-function insert_gv($name,$adess,$age,$gmail,$tell,$img,$gioitinh){
-    $spl = "insert into giaovien values (null,'$name','$adess','$age','$gmail','$tell','$img','$gioitinh')";
+function insert_gv($name,$adess,$age,$gmail,$tell,$img,$gioitinh,$tenlophoc){
+    $spl = "insert into giaovien values (null,'$name','$adess','$age','$gmail','$tell','$img','$gioitinh','$tenlophoc')";
     pdo_execute($spl);
 }
 function loadall_gv(){
