@@ -3,33 +3,45 @@ include "model/user.php";
 include "model/pdo.php";
 include "model/sinhvien.php";
 session_start();
-include "view/home.php";
 if(isset($_GET["act"])) {
-
-
 $check = $_GET["act"];
 switch ($check) {
-    case "giaovien":
-            if(isset($_SESSION["user"])) {
-            $act = $_GET['act'];
-            switch ($act) {
-
+    case "dangnhap" :
+        if(isset($_POST['dangnhap']) && ($_POST['dangnhap']) ) {
+            $user = $_POST["user"];
+            $pass = $_POST["pass"];
+            $checkuserGV = checkuserGV($user, $pass);
+            $checkuserSV = checkuserSV($user, $pass);
+            if(is_array($checkuserGV)) {
+                dangnhap($checkuserGV,"giaovien");
             }
-        }
-        else {
-            include "view/login.php";
-            if(isset($_POST['dangnhap']) && ($_POST['dangnhap']) ) {
-                $user = $_POST["user"];
-                $pass = $_POST["pass"];
-                $checkuser = checkuser($user, $pass);
-                if (is_array($checkuser)) {
-                    $_SESSION['user'] = $checkuser;
-//                   $thongbao = "đã nhập thành công";
-                    header('location : index.php');
-                } else {
-                    $thongbao = "tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí";
-                }
+            else {
+                dangnhap($checkuserSV,"hocsinh");
             }
         }
         break;
+    case "giaovien":
+           if(isset($_SESSION["user"])) {
+               extract($_SESSION["user"]);
+               if(isset($iddiaovien)) {
+                   header('Location: admin/index.php');
+               } else {
+                   echo "ban k phai giao vien";
+               }
+           } else {
+               include "view/login.php";
+           }
+        break;
+    case "hocsinh":
+        if(isset($_SESSION["user"])) {
+            header('Location: index.php');
+        } else {
+            include "view/login.php";
+        }
+        break;
+    default:
+        break;
 } }
+else {
+    include "view/home.php";
+}
