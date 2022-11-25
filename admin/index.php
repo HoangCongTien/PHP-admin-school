@@ -3,6 +3,7 @@ include "giaodien.php";
 include "../model/pdo.php";
 include "../model/sinhvien.php";
 include "../model/giaovien.php";
+session_start();
 if(isset($_GET['act'])){
     $act = $_GET['act'];
     switch($act){

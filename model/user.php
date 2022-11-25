@@ -3,11 +3,36 @@ function insert_taikhoan($email,$user,$pass){
     $spl = "insert into taikhoan(email,user,pass) values ('$email','$user','$pass')";
     pdo_execute($spl);
 }
-function checkuser($user,$pass){
-    $sql="select * from taikhoan where user='".$user."' and pass='".$pass."'";
+
+function checkuserSV($user,$pass){
+    $sql="select * from sinhvien where userSV='".$user."' and pass='".$pass."'";
     $dm=pdo_query_one($sql);
     return $dm;
 }
+function checkuserGV($user,$pass){
+    $sql="select * from giaovien where userGV='".$user."' and pass='".$pass."'";
+    $dm=pdo_query_one($sql);
+    return $dm;
+}
+function dangnhap($checkuser,$check) {
+    if (is_array($checkuser)) {
+        $_SESSION['user'] = $checkuser;
+        if($check=="giaovien") {
+            header('Location: index.php?act=giaovien');
+        }
+        else {
+            header('Location: index.php?act=hocsinh');
+        }
+    } else {
+        $thongbao = "tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí";
+        echo $thongbao;
+    }
+}
+
+
+
+
+
 function checkemail($email){
     $sql="select * from taikhoan where email='".$email."'";
     $dm=pdo_query_one($sql);
