@@ -4,6 +4,7 @@ include "../model/pdo.php";
 include "../model/sinhvien.php";
 include "../model/giaovien.php";
 include "../model/lophoc.php";
+session_start();
 if(isset($_GET['act'])){
     $act = $_GET['act'];
     switch($act){
@@ -152,21 +153,12 @@ if(isset($_GET['act'])){
                     
                     break;
                 // dang nhap
-            case  "dangnhap" :
-                if(isset($_POST['dangnhap']) && ($_POST['dangnhap']) ) {
-                    $user = $_POST["user"];
-                    $pass = $_POST["pass"];
-                    $checkuser = checkuser($user, $pass);
-                    if (is_array($checkuser)) {
-                        $_SESSION['user'] = $checkuser;
-//                   $thongbao = "đã nhập thành công";
-                        header('Location: index.php');
-                    } else {
-                        $thongbao = "tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí";
-                    }
-                }
-                include "dangnhap.html";
-                break;
+            
+                case "thoat" :
+                    //            echo session_destroy();
+                                session_unset();
+                                    header("location: ../index.php");
+                                break;
             break;
                 case 'listgv' :
                     $giaovien = loadall_gv();
@@ -182,5 +174,3 @@ if(isset($_GET['act'])){
   }
 
 //   include "footer.php";
-
-?>

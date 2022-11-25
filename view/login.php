@@ -20,7 +20,7 @@
             </div>
         </header>
         <main>
-            <form action="login.php" method="post">
+            <form action="index.php?act=dangnhap" method="post">
                 <div class="inputt">
                     <div class="email">
                         <p>Email</p>
@@ -34,7 +34,7 @@
 
                 <div class="buttonn">
                     <div class="button1">
-                        <button >Login now</button>
+                        <input type="submit" value="Đăng Nhập" name="dangnhap">
                     </div>
                     <div class="button2">
                         <button>
