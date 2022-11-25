@@ -154,6 +154,11 @@ if(isset($_GET['act'])){
                 }
                 include "dangnhap.html";
                 break;
+                case "thoat" :
+                    //            echo session_destroy();
+                                session_unset();
+                                    header("location: ../index.php");
+                                break;
             break;
                 case 'listgv' :
                     $giaovien = loadall_gv();
