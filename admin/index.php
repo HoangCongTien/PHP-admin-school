@@ -140,21 +140,6 @@ if(isset($_GET['act'])){
                             include "giao_vien/list.php";
                             break;
                 // dang nhap
-            case  "dangnhap" :
-                if(isset($_POST['dangnhap']) && ($_POST['dangnhap']) ) {
-                    $user = $_POST["user"];
-                    $pass = $_POST["pass"];
-                    $checkuser = checkuser($user, $pass);
-                    if (is_array($checkuser)) {
-                        $_SESSION['user'] = $checkuser;
-//                   $thongbao = "đã nhập thành công";
-                        header('Location: index.php');
-                    } else {
-                        $thongbao = "tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí";
-                    }
-                }
-                include "dangnhap.html";
-                break;
                 case "thoat" :
                     //            echo session_destroy();
                                 session_unset();
