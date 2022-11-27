@@ -3,6 +3,7 @@ include "giaodien.php";
 include "../model/pdo.php";
 include "../model/sinhvien.php";
 include "../model/giaovien.php";
+include "../model/lophoc.php";
 session_start();
 if(isset($_GET['act'])){
     $act = $_GET['act'];
@@ -90,7 +91,8 @@ if(isset($_GET['act'])){
     //                      echo 'sorry, ảnh của bạn ko được uplead';
                     }
                     $gioitinh = $_POST['gioitinh'];
-                    insert_gv($name,$adress,$age,$gmail,$tell,$img,$gioitinh);
+                    $idlophoc = $_POST['idlophoc'];
+                    insert_gv($name,$adress,$age,$gmail,$tell,$img,$gioitinh,$idlophoc);
                     $thongbao = "thêm thành công";
                 }
                 
@@ -140,6 +142,21 @@ if(isset($_GET['act'])){
                             include "giao_vien/list.php";
                             break;
                 // dang nhap
+            case  "dangnhap" :
+                if(isset($_POST['dangnhap']) && ($_POST['dangnhap']) ) {
+                    $user = $_POST["user"];
+                    $pass = $_POST["pass"];
+                    $checkuser = checkuser($user, $pass);
+                    if (is_array($checkuser)) {
+                        $_SESSION['user'] = $checkuser;
+//                   $thongbao = "đã nhập thành công";
+                        header('Location: index.php');
+                    } else {
+                        $thongbao = "tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí";
+                    }
+                }
+                include "dangnhap.html";
+                break;
                 case "thoat" :
                     //            echo session_destroy();
                                 session_unset();
@@ -160,5 +177,3 @@ if(isset($_GET['act'])){
   }
 
 //   include "footer.php";
-
-?>

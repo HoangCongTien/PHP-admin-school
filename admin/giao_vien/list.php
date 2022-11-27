@@ -40,7 +40,7 @@
                         <td>'.$tell.'</td>
                         <td>'.$img.'</td>
                          <td>'.$gioitinh.'</td>
-                        
+                         <td>'.$tenlophoc.'</td>
                         <td><a href="'.$suagv.'"><input type="button" name="" id="" value="sửa"></a> <a href="'.$xoagv.'"><input type="button" name="" id="" value="xóa"></a></td>
                          </tr>
                     ';

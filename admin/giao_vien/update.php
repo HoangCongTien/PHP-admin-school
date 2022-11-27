@@ -51,7 +51,16 @@ if(is_file($avatar )){
             Giới tính <br>
            <input type="text" name="gioitinh" id="" value="<?php echo $gioitinh ?>">
         </div>
-
+        <div class="rowinput">
+            Lớp phụ trách
+            <select name="" id="">
+                <?php
+                foreach($tenlophoc as $value){
+                ?>
+                <option value=""><?php echo $value ?></option>
+                <?php } ?>
+            </select>
+        </div>
         <div class="rowsubmit">
             <input type="submit" name="themmoi" id="" value="thêm mới">
             <input type="reset" name="" id="" value="nhập lại">
