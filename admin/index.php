@@ -157,19 +157,22 @@ if(isset($_GET['act'])){
                         $giaovien=loadall_gv();
                             include "giao_vien/list.php";
                             break;
-                //lop hoc
-                case 'addlh' :
-                    if(isset($_POST['themmoi'])&& ($_POST['themmoi'])){
-                        $tenlophoc = $_POST['tenlophoc'];
-                        insert_lh($tenlophoc);
-                        $thongbao = "thêm thành công";
-                    }
-                    
-                    include "lop_hoc/add.php";
-                    
-                    break;
                 // dang nhap
-            
+            case  "dangnhap" :
+                if(isset($_POST['dangnhap']) && ($_POST['dangnhap']) ) {
+                    $user = $_POST["user"];
+                    $pass = $_POST["pass"];
+                    $checkuser = checkuserSV($user, $pass);
+                    if (is_array($checkuser)) {
+                        $_SESSION['user'] = $checkuser;
+//                   $thongbao = "đã nhập thành công";
+                        header('Location: index.php');
+                    } else {
+                        $thongbao = "tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí";
+                    }
+                }
+                include "dangnhap.html";
+                break;
                 case "thoat" :
                     //            echo session_destroy();
                                 session_unset();
