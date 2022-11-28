@@ -1,6 +1,6 @@
 <?php
-function insert_gv($name,$adess,$age,$gmail,$tell,$img,$gioitinh,$tenlophoc){
-    $spl = "insert into giaovien values (null,'$name','$adess','$age','$gmail','$tell','$img','$gioitinh','$tenlophoc')";
+function insert_gv($name,$adess,$age,$gmail,$tell,$img,$gioitinh,$idlophoc){
+    $spl = "insert into giaovien values (null,'$name','$adess','$age','$gmail','$tell','$img','$gioitinh','$idlophoc')";
     pdo_execute($spl);
 }
 function loadall_gv(){
@@ -24,5 +24,10 @@ function loadone_gv($idgiaovien){
 function delete_gv($idgiaovien){
     $sql = "delete from giaovien where idgiaovien =".$idgiaovien;
     pdo_execute($sql);
+}
+function gv_search($searchgv){
+    $result = "select * from giaovien where name like '%$searchgv%'";
+    $listgv_search = pdo_query($result);
+    return $listgv_search;
 }
 ?>

@@ -25,5 +25,9 @@ function update_sv($idsinhvien,$name,$dress,$age,$tell,$img,$gioitinh){
     }
     pdo_execute($sql);
 }
-
+function sv_search($searchsv){
+    $result = "select * from sinhvien where name like '%$searchsv%'";
+    $listsv_search = pdo_query($result);
+    return $listsv_search;
+}
 ?>   

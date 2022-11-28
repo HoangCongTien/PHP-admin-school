@@ -73,6 +73,14 @@ if(isset($_GET['act'])){
             $sinhvien=loadall_sv();
             include "sinh_vien/list.php";
             break;
+          case 'search_sv' :
+              if(isset($_POST['search']) && ($_POST['search']) ){
+                $searchsv = $_POST['search_sv'];
+                $search = sv_search($searchsv);
+              }
+              
+              include "sinh_vien/list_searchsv.php";
+              break;
             // giáo viên
             case 'addgv' :
                 if(isset($_POST['themmoi'])&& ($_POST['themmoi'])){
@@ -92,7 +100,7 @@ if(isset($_GET['act'])){
                     }
                     $gioitinh = $_POST['gioitinh'];
                     $idlophoc = $_POST['idlophoc'];
-                    insert_gv($name,$adress,$age,$gmail,$tell,$img,$gioitinh,$idlophoc);
+                    insert_gv($name,$adess,$age,$gmail,$tell,$img,$gioitinh,$idlophoc);
                     $thongbao = "thêm thành công";
                 }
                 
@@ -127,13 +135,21 @@ if(isset($_GET['act'])){
                         update_gv($idgiaovien,$name,$adess,$age,$gmail,$tell,$img,$gioitinh);
                         $thongbao = "thêm thành công";
                     }
-                  $sinhvien=loadall_sv();
+                  $giaovien=loadall_gv();
                    include "giao_vien/list.php";
                     break;
                     case 'listgv' :
                         $giaovien = loadall_gv();
                         include "giao_vien/list.php";
                         break;
+                    case 'search_gv' :
+                          if(isset($_POST['search']) && ($_POST['search']) ){
+                            $searchgv = $_POST['search_gv'];
+                            $search = gv_search($searchgv);
+                          }
+                          
+                          include "giao_vien/list_search.php";
+                          break;
                     case 'xoagv':
                         if(isset($_GET['id']) && ($_GET['id']>0)) {
                             delete_gv($_GET['id']);

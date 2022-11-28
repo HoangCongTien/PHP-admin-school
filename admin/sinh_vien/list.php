@@ -1,3 +1,8 @@
+<div class="search">
+    <form action="index.php?act=search_sv" method="post">
+                <input type="text" name="search_sv" id="">
+                <input type="submit" name="search" id="" value="Tìm Kiếm">
+            
 <div class="row">
             <div class="rowformtile">
                 <h1>Danh sách sinh viên</h1>

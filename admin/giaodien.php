@@ -16,11 +16,11 @@
             <ul>
                 <li><a href="index.php?act=addsv">sinh viên</a></li>
                 <li><a href="index.php?act=addgv">Giáo viên</a></li>
-<<<<<<< HEAD
+
                 <li><a href="index.php?act=addlh">Lớp học</a></li>
-=======
+
                 <li><a href="index.php?act=thoat">thoat</a></li>
->>>>>>> b20ce448a962c64aa8f9ce1b74a2e25e8c528637
+
             </ul>
         </div>
         </div>
